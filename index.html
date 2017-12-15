@@ -1,0 +1,60 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="a Wikepedia View">
+  <meta name="author" content="Yingjie Hu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="css/main.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,900,400italic,700italic' rel='stylesheet'>
+  <script>
+    $(document).ready(function() {
+      $(".search-icon").click(function(){
+        $(".search-icon").hide();
+        $(".search-bar").show();
+      });
+
+      $(".search-bar").click(function(){
+        $(".search-bar").hide();
+        $(".search-icon").show();
+      });
+    });
+  </script>
+
+
+</head>
+
+<body>
+
+  <div class="container text-light text-center">
+    <div class="instruction">
+      Click here for a random article
+    </div>
+
+    <div class="instruction">
+      <div class="search-icon">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="search-bar">
+        <form action="">
+          <input type="text" required>
+          <button style="submit">X</button>
+        </form>
+      </div>
+      <div class="instruction">
+        Click icon to search
+      </div>
+    </div>
+
+    <div id="footer" class="container justify-content-center">
+      Written and Coded By <a href="http://yingjiehu.com" target="_blank">Yingjie Hu</a> with <span style="color:red"><i class="fas fa-heart"></i></span><br>
+      View <a href="https://github.com/huyingjie/wikipediaView" target="_blank">source code</a> at GitHub and latest <a href="http://wikipediaview.yingjiehu.com" target="_blank">updated website</a>
+    </div>
+  </body>

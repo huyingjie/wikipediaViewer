@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(13, 38, 56) !important;
+  display: flex;
+  align-items: center;
+  font-family: Lato;
+}
+
+.search-icon {
+  color: rgb(212, 99, 44);
+  font-size: 2em;
+  margin: 20px;
+}
+
+.search-bar {
+  display:none;
+  margin: 20px;
+}
+
+.instruction {
+  font-size: 18px;
+}
+
+#footer {
+  position:absolute;bottom:20px !important;
+  font-size: 14px;
+}
+
+a {
+  color: rgb(97, 175, 239) !important;
+}
