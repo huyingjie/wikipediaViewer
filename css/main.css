@@ -1,30 +1,62 @@
 body {
   background-color: rgb(13, 38, 56) !important;
-  display: flex;
-  align-items: center;
   font-family: Lato;
+  color: silver !important;
+  padding: 20% 20px 20% 20px;
+  font-size: 14px;
 }
 
-.search-icon {
+#search-icon {
   color: rgb(212, 99, 44);
   font-size: 2em;
   margin: 20px;
 }
 
-.search-bar {
-  display:none;
-  margin: 20px;
-}
-
-.instruction {
-  font-size: 18px;
-}
-
 #footer {
   position:absolute;bottom:20px !important;
   font-size: 14px;
+  left: 0px;
+  right: 0px;
 }
 
 a {
   color: rgb(97, 175, 239) !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+a:active {
+  text-decoration: none !important;
+}
+
+*:focus {outline: none;}
+
+#form input{
+  border: 0px;
+  background-color: rgb(13, 38, 56);
+  color: white;
+  width: 300px;
+  border: 5px solid;
+  border-color: rgb(212, 99, 44);
+  border-radius: 20px;
+  display: inline-block;
+  float: center;
+}
+
+#form button {
+  color: rgb(212, 99, 44);
+  background-color: rgb(13, 38, 56);
+  border: 0px;
+  display: inline-block;
+  float: center;
+}
+
+#random {
+  border-radius: 20px;
+  border: 2px solid rgb(212, 99, 44);
+  padding: 6px;
+  background-color: rgb(212, 99, 44);
+  color: rgb(13, 38, 56) !important;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
