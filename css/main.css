@@ -13,10 +13,12 @@ body {
 }
 
 #footer {
-  position:absolute;bottom:20px !important;
+  position:relative;
+  bottom:20px !important;
   font-size: 14px;
   left: 0px;
   right: 0px;
+  margin-top: 40px;
 }
 
 a {
@@ -59,4 +61,32 @@ a:active {
   color: rgb(13, 38, 56) !important;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.search-url{
+  cursor: pointer;
+}
+.search-block:hover {
+
+  border-left: 10px solid rgb(212, 99, 44);
+}
+.search-block{
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 20px;
+  color: rgb(13, 38, 56);
+  /*border-left: 10px solid transparent;*/
+  margin-left:-10px;
+}
+.search-title{
+  text-align: left;
+  font-weight: bold;
+}
+
+.search-result{
+  text-align: left;
+}
+
+.searchmatch {
+  color: lightsalmon;
 }

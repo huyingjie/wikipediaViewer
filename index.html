@@ -16,12 +16,19 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
   $(document).ready(function() {
-    var url = "https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=jsonfm&formatversion=2";
+    var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=china&origin=*";
     $.getJSON(url, function(json){
-      var contents = json;
-      //var contents = json.query.pages.revisions.content;
-      console.log(contents);
-      $("#contents").html(contents);
+      var contents = json.query.search;
+      var html = "";
+      for(var i = 0; i < contents.length; i++){
+        //console.log("i=",i, ", title", contents[i].title);
+        //console.log(contents[i].snippet);
+        html += "<a class='search-url' href='https://en.wikipedia.org/?curid=" + contents[i].pageid + "' target='_blank'><div class='search-block'>"
+        html += "<p class='search-title'>" + contents[i].title + "</p>";
+        html += "<div class='search-result'>" + contents[i].snippet + "</div>";
+        html += "</div></a>";
+      }
+      $("#contents").html(html);
     });
   });
   </script>
