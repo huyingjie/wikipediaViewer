@@ -1,9 +1,9 @@
 body {
   background-color: rgb(13, 38, 56) !important;
-  font-family: Lato;
   color: silver !important;
-  padding: 20% 20px 20% 20px;
+  padding: 20px;
   font-size: 14px;
+  margin: auto;
 }
 
 #search-icon {
@@ -21,18 +21,22 @@ body {
   margin-top: 40px;
 }
 
+clear {
+  cursor: pointer;
+}
+
 a {
-  color: rgb(97, 175, 239) !important;
+  color: rgb(212, 99, 44) !important;
 }
-a:hover {
-  text-decoration: none !important;
-}
-a:active {
+a, a:hover, a:active, a:visited{
   text-decoration: none !important;
 }
 
 *:focus {outline: none;}
 
+.form {
+  margin-top: 35%;
+}
 #form input{
   border: 0px;
   background-color: rgb(13, 38, 56);
@@ -53,7 +57,7 @@ a:active {
   float: center;
 }
 
-#random {
+.formbutton {
   border-radius: 20px;
   border: 2px solid rgb(212, 99, 44);
   padding: 6px;
@@ -63,21 +67,27 @@ a:active {
   margin-bottom: 20px;
 }
 
+#wiki {
+  border: 1px solid rgb(212, 99, 44);
+  border-radius: 10px;
+  margin-top: 40px;
+}
 .search-url{
   cursor: pointer;
 }
-.search-block:hover {
 
-  border-left: 10px solid rgb(212, 99, 44);
-}
 .search-block{
   background-color: #ffffff;
-  margin: 20px;
+  margin: 20px 20px 20px 30px;
   padding: 20px;
   color: rgb(13, 38, 56);
-  /*border-left: 10px solid transparent;*/
-  margin-left:-10px;
+  border-left: 10px solid transparent;
 }
+
+.search-block:hover {
+  border-left: 10px solid rgb(212, 99, 44);
+}
+
 .search-title{
   text-align: left;
   font-weight: bold;
@@ -88,5 +98,14 @@ a:active {
 }
 
 .searchmatch {
-  color: lightsalmon;
+  color: rgb(212, 99, 44);
+}
+
+.no-result{
+  padding: 20px;
+  font-size: 20px;
+}
+
+.fa {
+  display:inline !important;
 }

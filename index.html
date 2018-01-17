@@ -14,40 +14,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script>
-  $(document).ready(function() {
-    var url = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=china&origin=*";
-    $.getJSON(url, function(json){
-      var contents = json.query.search;
-      var html = "";
-      for(var i = 0; i < contents.length; i++){
-        //console.log("i=",i, ", title", contents[i].title);
-        //console.log(contents[i].snippet);
-        html += "<a class='search-url' href='https://en.wikipedia.org/?curid=" + contents[i].pageid + "' target='_blank'><div class='search-block'>"
-        html += "<p class='search-title'>" + contents[i].title + "</p>";
-        html += "<div class='search-result'>" + contents[i].snippet + "</div>";
-        html += "</div></a>";
-      }
-      $("#contents").html(html);
-    });
-  });
-  </script>
-
-
+  <script src="scripts/main.js"></script>
 </head>
 
 <body>
 
   <div class="container text-center">
-    <form id="form">
-          <input class="form-control" type="search" required placeholder="Search Wikipedia...">
-          <button type="submit">
-            <span id="search-icon"><i class="fas fa-search"></i></span>
-          </button>
-          <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" id="random"><i class="fas fa-random"></i> Random</a>
+    <form id="form" class="form">
+      <input name="input" class="form-control" id="term" type="search" required placeholder="Search Wikipedia...">
+      <button type="submit" value="click">
+        <span id="search-icon"><i class="fas fa-search"></i></span>
+      </button>
+      <span class="formbutton" id="clear">Clear</span>
+      <!-- <a href="#" class="formbutton" id="clear">Clear</a> -->
+      <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="formbutton"><i class="fas fa-random"></i>Random</a>
     </form>
-
-
 
     <div id="contents">
     </div>
